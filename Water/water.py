@@ -1,4 +1,4 @@
-# External module imp
+# External module imports 
 import RPi.GPIO as GPIO
 import datetime
 import time
@@ -14,7 +14,7 @@ def get_last_watered():
     except:
         return "NEVER!"
       
-def get_status(pin = 8):
+def get_status(pin = 21):
     GPIO.setup(pin, GPIO.IN) 
     return GPIO.input(pin)
 
