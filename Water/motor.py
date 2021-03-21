@@ -13,7 +13,7 @@ def pump_on(pin):
 def pump_off(pin):
 	GPIO.output(pin, GPIO.LOW)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	try:
 		pump_on(channel)
 		time.sleep(3)
