@@ -15,6 +15,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+WATER_PATH = Path(__file__).resolve().parent.parent.parent.parent / "Water"
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -25,7 +27,9 @@ SECRET_KEY = 'da&)d*-z74u=_-%uek(8_q+io3j5rly+xbt$+l=62b^ezs^hie'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '192.168.1.1', '192.168.1.2', '192.168.1.3', '192.168.1.4',
+                 '192.168.1.5', '192.168.1.6', '192.168.1.7', '192.168.1.8',
+                 ]
 
 
 # Application definition

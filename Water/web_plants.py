@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 import psutil
 import datetime
-from . import water
+import water
 import os
 
 app = Flask(__name__)
