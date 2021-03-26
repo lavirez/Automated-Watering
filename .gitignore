@@ -4,6 +4,5 @@ env
 .pycache
 
 
-static
 Web-Server/website/static
 Web-Server/website/media
