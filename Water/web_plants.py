@@ -21,12 +21,12 @@ def template(title = "HELLO!", text = ""):
     return templateDate
 
 @app.route("/")
-def hello():
+def initial():
     templateData = template()
     return render_template('main.html', **templateData)
 
 @app.route("/last_watered")
-def check_last_watered():
+def ret_last_watered():
     templateData = template(text = water.get_last_watered())
     return render_template('main.html', **templateData)
 
@@ -35,9 +35,9 @@ def action():
     status = water.get_status()
     message = ""
     if (status == 1):
-        message = "Water me please!"
+        message = "گلدان دارای آب است"
     else:
-        message = "I'm a happy plant"
+        message = "گلدان خشک است!"
 
     templateData = template(text = message)
     return render_template('main.html', **templateData)
@@ -45,25 +45,25 @@ def action():
 @app.route("/water")
 def action2():
     water.pump_on()
-    templateData = template(text = "Watered Once")
+    templateData = template(text = "آب داده شد!")
     return render_template('main.html', **templateData)
 
 @app.route("/auto/water/<toggle>")
-def auto_water(toggle):
+def auto_watering(toggle):
     running = False
     if toggle == "ON":
-        templateData = template(text = "Auto Watering On")
+        templateData = template(text = "آبیاری اتوماتیک فعال شد!")
         for process in psutil.process_iter():
             try:
                 if process.cmdline()[1] == 'auto_water.py':
-                    templateData = template(text = "Already running")
+                    templateData = template(text = "قبلا فعال شده است")
                     running = True
             except:
                 pass
         if not running:
             os.system("python3.4 auto_water.py&")
     else:
-        templateData = template(text = "Auto Watering Off")
+        templateData = template(text = "آبیاری اتوماتیک غیر فعال شد")
         os.system("pkill -f water.py")
 
     return render_template('main.html', **templateData)
