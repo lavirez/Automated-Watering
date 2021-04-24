@@ -2,20 +2,28 @@
 <html dir="rtl">
 <head>
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/example/css/cheetsheet.rtl.css">
   <link rel="stylesheet" href="{{ url_for('static', filename = '/example/css/cheatsheet.rtl.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename = '/assets/dist/css/bootstrap.rtl.min.css') }}">
 </head>
 
 <body>
-  <h1>"گلدان شماره یک</h1>
+ <nav>
+  <h1>گلدان شماره یک</h1>
   <h2>زمان روی سرور {{ time }}</h2>
-  <h2 class="text-muted"> {{ text }} </h2>
-  <a href="/auto/water/ON" class="btn btn-primary">روشن کردن آبیاری </a>
-  <a href="/auto/water/OFF" class="btn btn-primary">خاموش کردن آبیاری اتوماتیک</a>
-  <a href="/sensor" class="btn btn-primary">چک کردن وضعیت گلدان</a> <br>
-  <a href="/water" class="btn btn-primary">یک بار آب بده</a>
-  <a href="/last_watered" class="btn btn-primary">آخرین باری که آب داده شد</a>
+ </nav>
+  <h3 class="text-muted"> {{ text }} </h2>
+  <div class="row">
+    <div class="col-lg-12">
+      <a href="/auto/water/ON" class="btn btn-primary">روشن کردن آبیاری </a>
+      <a href="/auto/water/OFF" class="btn btn-primary">خاموش کردن آبیاری اتوماتیک</a>
+      <a href="/sensor" class="btn btn-primary">چک کردن وضعیت گلدان</a> <br>
+    </div>
+    <div class="col-lg-12">
+      <a href="/water" class="btn btn-primary">یک بار آب بده</a>
+      <a href="/last_watered" class="btn btn-primary">آخرین باری که آب داده شد</a>
+    </div>
+  </div>
+  
 
 </body>
 </html>
