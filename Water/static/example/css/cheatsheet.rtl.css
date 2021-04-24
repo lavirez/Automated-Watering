@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'SaminBold';
-	src:  url('/static/example/fonts/Samim-Bold.woff2') format('woff2'),
-		  url('/static/example/fonts/Samim-Bold.woff') format('woff');
+	src:  url('/example/fonts/Samim-Bold.woff2') format('woff2'),
+		  url('/example/fonts/Samim-Bold.woff') format('woff');
   }
   
 body {

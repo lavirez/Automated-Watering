@@ -2,19 +2,19 @@
 <html dir="rtl">
 <head>
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/static/assets/dist/css/bootstrap.rtl.min.css">
-  <link rel="stylesheet" href="/static/example/cheetsheet.rtl.css">
+  <link rel="stylesheet" href="/example/cheetsheet.rtl.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename = '/assets/dist/css/bootstrap.rtl.min.css') }}">
 </head>
 
 <body>
-  <h1>PLANT HELPLINE</h1>
-  <h2>The date and time on the server is: {{ time }}</h2>
-  <h2> {{ text }} </h2>
-  <a href="/auto/water/ON" class="btn btn-primary"><button>روشن کردن آبیاری اتوماتیک</button></a>
-  <a href="/auto/water/OFF" class="btn btn-primary"><button>خاموش کردن آبیاری اتوماتیک</button></a>
-  <a href="/sensor" class="btn btn-primary"><button>چک کردن وضعیت گلدان</button></a> <br>
-  <a href="/water" class="btn btn-primary"><button>یک بار آب بده</button></a>
-  <a href="/last_watered" class="btn btn-primary"><button>آخرین باری که آب داده شد</button></a>
+  <h1>"گلدان شماره یک</h1>
+  <h2>زمان روی سرور {{ time }}</h2>
+  <h2 class="text-muted"> {{ text }} </h2>
+  <a href="/auto/water/ON" class="btn btn-primary">روشن کردن آبیاری </a>
+  <a href="/auto/water/OFF" class="btn btn-primary">خاموش کردن آبیاری اتوماتیک</a>
+  <a href="/sensor" class="btn btn-primary">چک کردن وضعیت گلدان</a> <br>
+  <a href="/water" class="btn btn-primary">یک بار آب بده</a>
+  <a href="/last_watered" class="btn btn-primary">آخرین باری که آب داده شد</a>
 
 </body>
 </html>
